@@ -83,7 +83,8 @@ namespace BvhSample
                                                                       .Or(Parse.String("Zposition").Token().Return(ChannelType.Zposition))
                                                                       .Or(Parse.String("Xrotation").Token().Return(ChannelType.Xrotation))
                                                                       .Or(Parse.String("Yrotation").Token().Return(ChannelType.Yrotation))
-                                                                      .Or(Parse.String("Zrotation").Token().Return(ChannelType.Zrotation)).Many()
+                                                                      .Or(Parse.String("Zrotation").Token().Return(ChannelType.Zrotation))
+                                                                      .Repeat(n)
                                                                   select channels
                                                                     ;
 
